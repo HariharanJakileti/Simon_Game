@@ -39,7 +39,7 @@ function checkAnswer(currentLevel){
     }
     else{
         play("wrong");
-        $("h1").text("Game Over! Press any key to continue");
+        $("h1").text("Game Over! press start to continue");
         $("body").addClass("game-over");
 
         setTimeout(function(){
