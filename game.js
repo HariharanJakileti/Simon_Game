@@ -9,7 +9,18 @@ var started=false;
 
 var level=0;
 
-$(document).keydown(function(){
+$(".restart").click(function(){
+  
+    if(!started){
+        $("h1").text("Level "+level);
+        nextSequence();
+        started=true;
+      }
+
+
+});
+
+/*$(document).keydown(function(){
   
     if(!started){
       $("h1").text("Level "+level);
@@ -17,7 +28,7 @@ $(document).keydown(function(){
       started=true;
     }
 
-});
+});*/
 
 function checkAnswer(currentLevel){
     if(gamePattern[currentLevel] === userClickedPattern[currentLevel]){
